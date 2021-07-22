@@ -1,3 +1,6 @@
-{"name":"Buôn Ma Thuột","desc":"Mây đen u ám","temp":292.19,"press":1007,"icon":"04d@2x.png","date":{"$$date":1626945251836},"_id":"WoFTLBHxA0hb3Cll"}
-{"name":"Buntharik","desc":"Mưa nhẹ","temp":300.49,"press":1005,"icon":"10d@2x.png","date":{"$$date":1626945293172},"_id":"Rn45sK4Hc7zBJ2PI"}
 {"name":"Phu Khiao","desc":"Mây đen u ám","temp":306.19,"press":1003,"icon":"04d@2x.png","date":{"$$date":1626945295959},"_id":"5pAtIPNPSdUNIW24"}
+{"name":"Buntharik","desc":"Mưa nhẹ","temp":300.49,"press":1005,"icon":"10d@2x.png","date":{"$$date":1626945293172},"_id":"Rn45sK4Hc7zBJ2PI"}
+{"name":"Buôn Ma Thuột","desc":"Mây đen u ám","temp":292.19,"press":1007,"icon":"04d@2x.png","date":{"$$date":1626945251836},"_id":"WoFTLBHxA0hb3Cll"}
+{"name":"Tỉnh Đắc Lắc","desc":"Mưa nhẹ","temp":295.36,"press":1007,"icon":"10n@2x.png","date":{"$$date":1626975333874},"_id":"qqYPsNhAC7IuK4zZ"}
+{"name":"Kon Tum","desc":"Mây đen u ám","temp":293.89,"press":1006,"icon":"04n@2x.png","date":{"$$date":1626975336415},"_id":"aPlQZXnS8S7KrSmZ"}
+{"name":"Pakxong","desc":"Mây đen u ám","temp":294.52,"press":1008,"icon":"04n@2x.png","date":{"$$date":1626975337421},"_id":"YuqAl4R3ZpIlZljI"}

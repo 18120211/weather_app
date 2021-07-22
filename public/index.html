@@ -41,7 +41,7 @@
         console.log(weaInfor);
         const name = weaInfor.name;
         let description = weaInfor.weather[0].description;
-        const temp = weaInfor.main.temp;
+        const temp = (weaInfor.main.temp - 273).toFixed(2);
         const press = weaInfor.main.pressure;
         const hum = weaInfor.main.humidity;
         const icon = weaInfor.weather[0].icon +'@2x.png';
