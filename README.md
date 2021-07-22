@@ -7,6 +7,7 @@
 - Ứng dụng được xây dựng bằng các bước cơ bản sau:
     1. Vẽ bản đồ bằng [Leaflet.js](https://leafletjs.com/)
     2. Lấy dữ liệu tọa độ được nhấp trên bản đồ sau đó gửi yêu cầu lấy thông tin thời tiết hiện tại bằng tọa độ cho [OpenWeatherMap Api](https://openweathermap.org/api)
+    3. File log được lưu bằng [nedb](https://github.com/louischatriot/nedb) tại thư mục `/public/data/log.db`
 
 - Hướng dẫn chạy ựng dụng trên máy tính cá nhân:
     1. Đảm bảo đã cài đặt Nodejs và git tool
@@ -23,4 +24,4 @@
 - *Gmail: minhthevo123@gmail.com*
 
 - Demo ứng dụng:
-![](public\img\Demo.PNG)
+![](https://github.com/18120211/weather_app/blob/main/public/img/Demo.PNG)
