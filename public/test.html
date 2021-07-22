@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Untitled Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script>
+        var stateObject = {
+            "India": {
+                "Delhi": ["new Delhi", "North Delhi"],
+                "Kerala": ["Thiruvananthapuram", "Palakkad"],
+                "Goa": ["North Goa", "South Goa"],
+            },
+            "Australia": {
+                "South Australia": ["Dunstan", "Mitchell"],
+                "Victoria": ["Altona", "Euroa"]
+            }, "Canada": {
+                "Alberta": ["Acadia", "Bighorn"],
+                "Columbia": ["Washington", ""]
+            },
+        }
+        window.onload = function () {
+            var countrySel = document.getElementById("countrySel"),
+                stateSel = document.getElementById("stateSel"),
+                districtSel = document.getElementById("districtSel");
+            for (var country in stateObject) {
+                countrySel.options[countrySel.options.length] = new Option(country, country);
+            }
+            countrySel.onchange = function () {
+                stateSel.length = 1; // remove all options bar first
+                districtSel.length = 1; // remove all options bar first
+                if (this.selectedIndex < 1) return; // done
+                for (var state in stateObject[this.value]) {
+                    stateSel.append(new Option(state, state));
+                }
+            }
+            // countrySel.onchange(); // reset in case page is reloaded
+            stateSel.onchange = function () {
+                districtSel.length = 1; // remove all options bar first
+                if (this.selectedIndex < 1) return; // done
+
+                let couSelected = $('#countrySel').find('option:selected').text();  
+                let staSelected = $('#stateSel').find('option:selected').text();
+                let districts = stateObject[couSelected][staSelected];
+                districts.forEach(element => {
+                    districtSel.append(new Option(element, element));
+                });
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <form name="myform" id="myForm">
+        Select Country: <select name="state" id="countrySel" size="1">
+            <option value="" selected="selected">Select Country</option>
+        </select>
+        <br>
+        <br>
+        Select State: <select name="countrya" id="stateSel" size="1">
+            <option value="" selected="selected">Please select Country first</option>
+        </select>
+        <br>
+        <br>
+        Select District: <select name="district" id="districtSel" size="1">
+            <option value="" selected="selected">Please select State first</option>
+        </select><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>

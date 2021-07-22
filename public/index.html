@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather api</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <style>
+    #myMap {
+      height: 700px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="myMap"></div>
+  <script>
+    const myMap = L.map('myMap').setView([10.762622, 106.660172], 7);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWluaHRoZXZvdGVtcCIsImEiOiJja3I1dWZnbDczOWNuMnZwYWx1bnZ1dTUwIn0.9YGr8bxXlv4-6ql8ocAjZg', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1,
+      accessToken: 'pk.eyJ1IjoibWluaHRoZXZvdGVtcCIsImEiOiJja3I1dWZnbDczOWNuMnZwYWx1bnZ1dTUwIn0.9YGr8bxXlv4-6ql8ocAjZg'
+    }).addTo(myMap);
+    myMap.on('click', (evt) => {
+      const lat = evt.latlng.lat;
+      const lng = evt.latlng.lng;
+      const data = { lat: lat, lng: lng };
+      $.post('/weaInfor', data, (weaInfor) => {
+        console.log(weaInfor);
+        const name = weaInfor.name;
+        let description = weaInfor.weather[0].description;
+        const temp = weaInfor.main.temp;
+        const press = weaInfor.main.pressure;
+        const hum = weaInfor.main.humidity;
+        const icon = weaInfor.weather[0].icon +'@2x.png';
+        const firstChar = description[0].toUpperCase();
+        description = firstChar + description.substring(1, description.length);
+
+        const mainInfor = `<p><b>${name}</b><p/p>
+                            <img src="./img/${icon}"></img>
+                            <p><b>${description}</b></p>
+                            <p>Nhiệt độ: ${temp} &deg;C</p>
+                            <p>Độ ẩm: ${hum}%</p>
+                            <p>Áp suất: ${press}(hPa)`
+        let marker = L.marker([lat, lng]).addTo(myMap);
+        marker.bindPopup(mainInfor).openPopup();
+      });
+
+
+    });
+  </script>
+</body>
+
+</html>
