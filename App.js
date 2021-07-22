@@ -47,3 +47,5 @@ app.post('/weaInfor', async (req, res) => {
     }
     db.insert(data); 
 });
+
+// hello
