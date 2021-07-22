@@ -19,7 +19,7 @@
         npm install
         npm start
     ```
-- *Bạn nào có tham về thì mình rất cảm ơn nếu bạn để lại 1 sao cho repository này*
+- *Bạn nào có tham khảo thì mình rất cảm ơn nếu bạn để lại 1 sao cho repository này*
 
 - *Gmail: minhthevo123@gmail.com*
 
