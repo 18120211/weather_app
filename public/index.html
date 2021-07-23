@@ -15,15 +15,26 @@
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
   <style>
-    #myMap {
-      height: 700px;
+    #title {
+      text-align: center;
+    }
+
+    * {
+      margin: 0;
+      padding: 4;
     }
   </style>
 </head>
 
 <body>
+  <div>
+    <h2 id="title">
+      Get current weather information by clicking on the map
+    </h2>
+  </div>
   <div id="myMap"></div>
   <script>
+    $('#myMap').height($(window).height() - $('#title').height());
     const myMap = L.map('myMap').setView([10.762622, 106.660172], 7);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWluaHRoZXZvdGVtcCIsImEiOiJja3I1dWZnbDczOWNuMnZwYWx1bnZ1dTUwIn0.9YGr8bxXlv4-6ql8ocAjZg', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -44,15 +55,22 @@
         const temp = (weaInfor.main.temp - 273).toFixed(2);
         const press = weaInfor.main.pressure;
         const hum = weaInfor.main.humidity;
-        const icon = weaInfor.weather[0].icon +'@2x.png';
+        const icon = weaInfor.weather[0].icon + '@2x.png';
+        const timezone = weaInfor.timezone;
+        const windSpeed = weaInfor.wind.speed;
         const firstChar = description[0].toUpperCase();
         description = firstChar + description.substring(1, description.length);
+        const d = new Date();
+        let date = new Date(d.getTime()  + timezone * 1000);
+        const strDate = date.getUTCDate() + '/' + date.getUTCMonth() + '/' + date.getUTCFullYear() + ' '
+                          + date.getUTCHours() + ':' + date.getUTCMinutes();
 
-        const mainInfor = `<p><b>${name}</b><p/p>
+        const mainInfor = `<p><b>${name} - ${strDate}</b><p/p>
                             <img src="./img/${icon}"></img>
                             <p><b>${description}</b></p>
                             <p>Nhiệt độ: ${temp} &deg;C</p>
                             <p>Độ ẩm: ${hum}%</p>
+                            <p>Tốc độ gió: ${windSpeed}(m/s)</p>
                             <p>Áp suất: ${press}(hPa)`
         let marker = L.marker([lat, lng]).addTo(myMap);
         marker.bindPopup(mainInfor).openPopup();

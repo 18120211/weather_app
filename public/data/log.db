@@ -1,6 +1,17 @@
+{"name":"Gia Lai","desc":"Mây đen u ám","temp":295.96,"press":1006,"icon":"04d@2x.png","date":{"$$date":1627007211263},"_id":"4BNwj4BpjuqKZU8a"}
 {"name":"Phu Khiao","desc":"Mây đen u ám","temp":306.19,"press":1003,"icon":"04d@2x.png","date":{"$$date":1626945295959},"_id":"5pAtIPNPSdUNIW24"}
+{"name":"Don Tan","desc":"Mưa nhẹ","temp":296.66,"press":1003,"icon":"10d@2x.png","date":{"$$date":1627039580554},"_id":"8iz1uRcVncy5e3Qz"}
+{"name":"Khok Charoen","desc":"Mây đen u ám","temp":295.08,"press":1005,"icon":"04d@2x.png","date":{"$$date":1627039432819},"_id":"BffVw8hbDVlt3Hmm"}
 {"name":"Buntharik","desc":"Mưa nhẹ","temp":300.49,"press":1005,"icon":"10d@2x.png","date":{"$$date":1626945293172},"_id":"Rn45sK4Hc7zBJ2PI"}
 {"name":"Buôn Ma Thuột","desc":"Mây đen u ám","temp":292.19,"press":1007,"icon":"04d@2x.png","date":{"$$date":1626945251836},"_id":"WoFTLBHxA0hb3Cll"}
-{"name":"Tỉnh Đắc Lắc","desc":"Mưa nhẹ","temp":295.36,"press":1007,"icon":"10n@2x.png","date":{"$$date":1626975333874},"_id":"qqYPsNhAC7IuK4zZ"}
-{"name":"Kon Tum","desc":"Mây đen u ám","temp":293.89,"press":1006,"icon":"04n@2x.png","date":{"$$date":1626975336415},"_id":"aPlQZXnS8S7KrSmZ"}
 {"name":"Pakxong","desc":"Mây đen u ám","temp":294.52,"press":1008,"icon":"04n@2x.png","date":{"$$date":1626975337421},"_id":"YuqAl4R3ZpIlZljI"}
+{"name":"Tỉnh Đắc Lắc","desc":"Mây đen u ám","temp":297.03,"press":1005,"icon":"04n@2x.png","date":{"$$date":1627039569347},"_id":"ZqLv7YO0JWhAhsat"}
+{"name":"Kavī Mehdīyeh","desc":"Bầu trời quang đãng","temp":312.16,"press":995,"icon":"01d@2x.png","date":{"$$date":1627038360454},"_id":"ZzYjVaxvZdO9WCri"}
+{"name":"Kon Tum","desc":"Mây đen u ám","temp":293.89,"press":1006,"icon":"04n@2x.png","date":{"$$date":1626975336415},"_id":"aPlQZXnS8S7KrSmZ"}
+{"name":"Sen Moronom","desc":"Mưa nhẹ","temp":295.67,"press":1006,"icon":"10n@2x.png","date":{"$$date":1627039603007},"_id":"amr1cpzKP7YxZQhV"}
+{"name":"Gia Lai","desc":"Mây đen u ám","temp":296.62,"press":1005,"icon":"04d@2x.png","date":{"$$date":1627037104445},"_id":"h5YTQjPDdtz8AkUz"}
+{"name":"Willowbrook","desc":"Mây thưa","temp":292.64,"press":1016,"icon":"02n@2x.png","date":{"$$date":1627038623524},"_id":"hJ94mM0jtb32K4AR"}
+{"name":"Gia Lai","desc":"Mây đen u ám","temp":294.48,"press":1005,"icon":"04n@2x.png","date":{"$$date":1627039459167},"_id":"kJTpYSEcI3XLTA9s"}
+{"name":"Tỉnh Đắc Lắc","desc":"Mưa nhẹ","temp":295.36,"press":1007,"icon":"10n@2x.png","date":{"$$date":1626975333874},"_id":"qqYPsNhAC7IuK4zZ"}
+{"name":"Tỉnh Đắc Lắc","desc":"Mây đen u ám","temp":295.14,"press":1008,"icon":"04n@2x.png","date":{"$$date":1627043413937},"_id":"7HQfsI3Ap28rf39x"}
+{"name":"Siem Reap","desc":"Mây đen u ám","temp":301.04,"press":1007,"icon":"04n@2x.png","date":{"$$date":1627043836987},"_id":"xxJUVbsieeoRID3o"}
