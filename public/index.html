@@ -58,6 +58,7 @@
         const icon = weaInfor.weather[0].icon + '@2x.png';
         const timezone = weaInfor.timezone;
         const windSpeed = weaInfor.wind.speed;
+        const country = weaInfor.sys.country;
         const firstChar = description[0].toUpperCase();
         description = firstChar + description.substring(1, description.length);
         const d = new Date();
@@ -65,7 +66,7 @@
         const strDate = date.getUTCDate() + '/' + date.getUTCMonth() + '/' + date.getUTCFullYear() + ' '
                           + date.getUTCHours() + ':' + date.getUTCMinutes();
 
-        const mainInfor = `<p><b>${name} - ${strDate}</b><p/p>
+        const mainInfor = `<p><b>${name}(${country}) - ${strDate}</b><p/p>
                             <img src="./img/${icon}"></img>
                             <p><b>${description}</b></p>
                             <p>Nhiệt độ: ${temp} &deg;C</p>
